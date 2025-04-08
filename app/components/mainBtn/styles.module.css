@@ -1,0 +1,14 @@
+.mainBtn {
+    display: block;
+    padding: 15px 0;
+    border-radius: 10px;
+    width: 299px;
+    height: 58px;
+
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+
+    background: #006fe7;
+}

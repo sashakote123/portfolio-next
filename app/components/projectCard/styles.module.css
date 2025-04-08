@@ -1,0 +1,24 @@
+.card {
+    border-radius: 30px;
+    background: #d9d9d9;
+    width: 375px;
+    min-height: 384px;
+    padding: 36px 53px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.card a {
+    font-size: 20px;
+}
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+
+    margin-bottom: 37px;
+}

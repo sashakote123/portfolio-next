@@ -1,0 +1,120 @@
+.aboutPage {
+    position: relative;
+    top: 73px;
+
+    max-width: 1275px;
+    padding: 87px 15px 93px;
+    margin: 0 auto 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: "Literata", serif;
+
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    color: #000;
+
+    margin-bottom: 35px;
+}
+
+.titleDescription {
+    max-width: 800px;
+
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+
+    margin-bottom: 70px;
+}
+
+/* .timeLine {
+    display: flex;
+} */
+
+/* .leftColumn {
+    max-width: 524px;
+
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: right;
+    color: #000;
+} */
+
+.left {
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    
+    text-align: right;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: right;
+    color: #000;
+
+    margin-right: 237px;
+}
+
+.rightColumn {
+}
+.timeLine{
+    position: relative;
+
+}
+.line{
+    position: absolute;
+    left: 627px;
+    top: 10px;
+}
+
+.table tr th{
+    position: relative;
+    width: 526px;
+    max-height: 340px;
+}
+
+.year {
+    margin-bottom: 32px;
+    font-family: "Literata", serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #006fe7;
+    text-align: left;
+}
+
+.description {
+    text-align: left;
+    width: 526px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+
+    margin-bottom: 90px;
+}
+
+.btn {
+    margin-top: 70px;
+    margin-bottom: 93px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 30px 0;
+    border-radius: 10px;
+    width: 255px;
+    height: 105px;
+    background: #006fe7;
+
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}

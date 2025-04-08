@@ -1,0 +1,25 @@
+.skillCard {
+    border-radius: 30px;
+    background-color: #006fe7;
+
+    width: 379px;
+    height: 451px;
+
+    padding: 60px 36px 66px;
+}
+
+.cardTitle {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+
+    margin-bottom: 31px;
+}
+
+.cardDescription {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}

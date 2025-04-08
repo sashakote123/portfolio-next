@@ -1,0 +1,33 @@
+.aboutMe {
+
+    display: flex;
+    align-items: center;
+    gap: 150px;
+
+    max-width: 1275px;
+    padding: 74px 15px 74px;
+    margin: 130px auto 0;
+}
+
+.textContainer {
+    width: 720px;
+}
+
+.textTitle {
+    font-family: "Literata", serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+
+    margin-bottom: 90px;
+}
+
+.textDescription {
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+
+    margin-bottom: 26px;
+}
+
+

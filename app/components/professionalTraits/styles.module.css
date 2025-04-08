@@ -1,0 +1,22 @@
+.traits {
+    max-width: 1275px;
+    padding: 0 15px;
+    margin: 46px auto 43px;
+}
+
+.title {
+    font-family: "Literata", serif;
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    color: #000;
+
+    margin-bottom: 50px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,27 @@
+.footer {
+    position: absolute;
+
+    width: 100%;
+    background-color: black;
+    height: 360px;
+
+}
+
+.title {
+    margin-top: 75px;
+    margin-bottom: 100px;
+    font-family: "Literata", serif;
+    font-optical-sizing: auto;
+
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}
+
+.copyrights {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}

@@ -1,0 +1,89 @@
+.section {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    height: calc(100vh);
+}
+
+.sectionContainer {
+    position: relative;
+
+    top: calc(100% - 680px);
+    max-width: 1275px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.image {
+    position: absolute;
+    left: -65px;
+    top: 0;
+}
+
+.textInfo {
+    position: absolute;
+    padding-right: 20px;
+    left: 660px;
+    top: 100px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 32px;
+    text-align: right;
+    color: #006fe7;
+}
+
+.name {
+    margin-bottom: 220px;
+
+    font-family: "Literata", serif;
+    font-optical-sizing: auto;
+
+    font-weight: 400;
+    font-size: 64px;
+    text-align: right;
+    color: #fff;
+}
+
+.portfolio {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: right;
+    color: #fff;
+}
+
+.sliderContainer {
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    height: 130px;
+    width: 100%;
+    background: #006fe7;
+
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    font-family: "Literata", serif;
+    font-weight: 400;
+    font-size: 64px;
+    padding-left: 100%;
+    
+    animation: slide 120s linear infinite;
+
+
+    display: inline-block;
+    white-space: nowrap;
+    color: #fff;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

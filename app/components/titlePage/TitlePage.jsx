@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './styles.module.css'
 import img from './../../sources/headerImage.png'
-
+import React from 'react';
 
 const TitlePage = () => {
     return (
@@ -14,12 +14,17 @@ const TitlePage = () => {
                     <h2 className={styles.portfolio}>Сreating aesthetically pleasing and needed projects <br />
                         using a "Person-To-Person" approach in design.</h2>
                 </div>
+
             </div>
             <div className={styles.sliderContainer}>
                 <div className={styles.slider}>
-                    BRAND DESIGN VISUAL IDENTITY LOGO DESIGN ILLUSTRATION AND ART PRINT DESIGN PACKAGING DESIGN USER INTERFACE
-                    &nbsp;•&nbsp;
-                    BRAND DESIGN VISUAL IDENTITY LOGO DESIGN ILLUSTRATION AND ART PRINT DESIGN PACKAGING DESIGN USER INTERFACE
+                    {[...Array(10)].map((_, i) => (
+                        <React.Fragment key={i}>
+                            BRAND DESIGN VISUAL IDENTITY LOGO DESIGN ILLUSTRATION AND ART PRINT DESIGN PACKAGING DESIGN USER INTERFACE
+                            <span className={styles.separator}>•</span>
+                        </React.Fragment>
+                    ))}
+
                 </div>
             </div>
         </section>

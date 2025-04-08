@@ -8,7 +8,7 @@
 .sectionContainer {
     position: relative;
 
-    top: calc(100% - 680px);
+    top: calc(100% - 810px);
     max-width: 1275px;
     padding: 0 15px;
     margin: 0 auto;
@@ -56,7 +56,7 @@
 .sliderContainer {
     overflow: hidden;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 130px); 
     height: 130px;
     width: 100%;
     background: #006fe7;
@@ -65,13 +65,17 @@
     align-items: center;
 }
 
+.separator {
+    margin: 0 1em; /* Отступы для разделителя */
+  }
+
 .slider {
     font-family: "Literata", serif;
     font-weight: 400;
     font-size: 64px;
     padding-left: 100%;
     
-    animation: slide 120s linear infinite;
+    animation: slide 800s linear infinite;
 
 
     display: inline-block;
@@ -81,9 +85,9 @@
 
 @keyframes slide {
     0% {
-        transform: translateX(0);
+        transform: translateX(-5%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(calc(-100% - 1em));
     }
 }

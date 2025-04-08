@@ -149,3 +149,12 @@
         transform: translateX(calc(-100% - 1em));
     }
 }
+
+@keyframes slide {
+    0% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(calc(-100% - 1em));
+    }
+}

@@ -11,7 +11,7 @@ const Contacts = () => {
                 <div className={styles.letter}>
                     <div className={styles.blueLine}></div>
                     <div className={styles.letterBack}>
-                        <Image src={img} alt='mark' />
+                        <Image className={styles.mark} src={img} alt='mark' />
                         <form className={styles.form} action="#!">
                             <input type="name" placeholder='Sender’s Name' />
                             <input type="text" placeholder='Sender’s Details' />

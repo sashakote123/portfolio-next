@@ -7,7 +7,7 @@ import MainBtn from './../mainBtn/MainBtn'
 const AboutMe = () => {
     return (
         <section className={styles.aboutMe}>
-            <Image src={img} alt='logo'></Image>
+            <Image className={styles.image} src={img} alt='logo'></Image>
             <div className={styles.textContainer}>
                 <h3 className={styles.textTitle}>
                     About me

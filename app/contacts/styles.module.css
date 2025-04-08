@@ -27,6 +27,7 @@
     z-index: 1;
 
     padding: 41px;
+
     width: 701px;
     height: 385px;
     box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.25);
@@ -56,8 +57,10 @@
     left: 145px;
     padding: 63px 68px;
 
-    width: 701px;
+    width: 100%;
+    max-width: 701px;
     height: 385px;
+
     box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.25);
     background: #fff;
 
@@ -65,7 +68,7 @@
 }
 .letterFront a {
     padding: 9px 0;
-    width: 114px;
+    max-width: 114px;
     height: 42px;
     font-weight: 400;
     font-size: 20px;
@@ -90,4 +93,41 @@
     font-weight: 400;
     font-size: 20px;
     color: #006fe7;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .title{
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .letter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .letterFront {
+        left: 0;
+        top: -50px;
+
+        width: 90vw;
+    }
+
+    .letterBack {
+        left: 0;
+        top: 0px;
+
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .letterBack {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .mark {
+        align-self: center;
+    }
 }

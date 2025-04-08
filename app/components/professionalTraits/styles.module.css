@@ -4,6 +4,16 @@
     margin: 46px auto 43px;
 }
 
+@media screen and (max-width: 730px) {
+    .traits{
+      margin-top: 0;
+      
+    }
+    .title{
+        margin-bottom: 30px !important;
+    }
+}
+
 .title {
     font-family: "Literata", serif;
     font-weight: 400;
@@ -16,7 +26,7 @@
 
 .list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }

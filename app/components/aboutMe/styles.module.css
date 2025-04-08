@@ -4,13 +4,40 @@
     align-items: center;
     gap: 150px;
 
-    max-width: 1275px;
-    padding: 74px 15px 74px;
+    max-width: 1295px;
+    padding: 74px 25px 74px;
     margin: 130px auto 0;
 }
 
+@media screen and (max-width: 730px) {
+    .aboutMe {
+        margin-top: 0px;
+        gap: 50px;
+       justify-content: space-between;
+ 
+    }
+    .textTitle {
+    
+        margin-bottom: 30px !important;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .aboutMe{
+        flex-direction: column;
+        align-items: center;
+        /* display: none; */
+    }
+
+    .image{
+        width: 190px;
+        align-self: flex-start;
+    }
+}
+
+
 .textContainer {
-    width: 720px;
+    max-width: 720px;
 }
 
 .textTitle {

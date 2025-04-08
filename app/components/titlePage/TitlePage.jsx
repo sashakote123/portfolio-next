@@ -11,7 +11,7 @@ const TitlePage = () => {
                 <div className={styles.textInfo}>
                     <h3 className={styles.description}>Designer portfolio</h3>
                     <h1 className={styles.name}>SIGRIANSKAYA YANA</h1>
-                    <h2 className={styles.portfolio}>Сreating aesthetically pleasing and needed projects <br />
+                    <h2 className={styles.portfolio}>Сreating aesthetically pleasing and needed projects 
                         using a "Person-To-Person" approach in design.</h2>
                 </div>
             </div>

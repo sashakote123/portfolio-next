@@ -15,7 +15,9 @@
 
 .grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 .gridRow li {
     margin-bottom: 50px;

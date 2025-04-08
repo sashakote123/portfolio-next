@@ -1,6 +1,9 @@
 .card {
+    position: relative;
+    overflow: hidden;
+
     border-radius: 30px;
-    background: #d9d9d9;
+    /* background: #d9d9d9; */
     width: 375px;
     min-height: 384px;
     padding: 36px 53px;
@@ -14,6 +17,41 @@
 .card a {
     font-size: 20px;
 }
+
+.card:hover .desc {
+    display: block;
+}
+
+.card:hover .imageWrapper {
+    display: block;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.717579250720461) 100%);
+}
+
+.imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6) 26%, rgba(255,255,255,1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  
+  .card:hover .imageWrapper::before {
+    opacity: 1;
+  }
+
+
+.desc {
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
 .title {
     font-weight: 600;
     font-size: 20px;
@@ -21,4 +59,13 @@
     color: #000;
 
     margin-bottom: 37px;
+}
+
+.imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }

@@ -6,7 +6,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 
 export const metadata: Metadata = {
-  title: "Portfilio Graphic designer",
+  title: "Yana's Design Portfolio",
   description: "SIGRIANSKAYA YANA",
 };
 

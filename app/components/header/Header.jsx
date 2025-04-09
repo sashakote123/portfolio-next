@@ -26,7 +26,9 @@ const Header = () => {
     return (
         <nav className={styles.navBar}>
             <div className={styles.barContainer}>
-                <Image src={img} alt="logo" />
+                <Link href={'/'}>
+                    <Image src={img} alt="logo" />
+                </Link>
                 <ul className={styles.nav}>
                     <li className={styles.listItem}>
                         <Link href={'/'}>Home</Link>
@@ -48,7 +50,7 @@ const Header = () => {
                 </ul>
                 <Image onClick={toggle} className={styles.burger} src={img2} alt='burger' />
             </div>
-            {toggled ? <SideMenu toggle={toggle}/> : null}
+            {toggled ? <SideMenu toggle={toggle} /> : null}
         </nav>
     );
 }

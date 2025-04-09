@@ -23,18 +23,18 @@ const list = [
 
 const resList = [
     [
-        { id: 1, title: "“Sytaya Sova” pizzeria neapolitana rebranding project. Guidebook", height: 447, column: 1, image: img1 },
-        { id: 4, title: "“YLETAЙ” Russian music festival visual identity redesign", height: 641, column: 1, image: img4 },//1650
+        { id: 1, title: "“Sytaya Sova” pizzeria neapolitana rebranding project. Guidebook", height: 447, column: 1, image: img1, link: 'https://www.behance.net/gallery/223085521/gajdbuk-sytaja-sova-piccerija-v-nizhnem-novgorode' },
+        { id: 4, title: "“YLETAЙ” Russian music festival visual identity redesign", height: 641, column: 1, image: img4, link: 'https://www.behance.net/gallery/211666187/diplomnyj-proekt-redizajn-festivalja-uletaj' },//1650
 
     ],
     [
-        { id: 2, title: "“Pro Skin” cosmetology clinic logo design and visual identity design. Logobook", height: 641, column: 2, image: img2 },
-        { id: 5, title: "City postcards. Package design, photography project", height: 447, column: 2, image: img5 },//1588
+        { id: 2, title: "“Pro Skin” cosmetology clinic logo design and visual identity design. Logobook", height: 641, column: 2, image: img2, link: 'https://www.behance.net/gallery/223085275/logobuk-Pro-Skin' },
+        { id: 5, title: "City postcards. Package design, photography project", height: 447, column: 2, image: img5, link: 'https://www.behance.net/gallery/208379821/gorod-n-serija-otkrytok' },//1588
 
     ],
     [
-        { id: 3, title: "“ADANA” exclusive gift calendar design", height: 447, column: 3, image: img3 },
-        { id: 6, title: "“VNE ZALA” sport’s cafe logo design and visual identity concept", height: 641, column: 3, image: img6 },
+        { id: 3, title: "“ADANA” exclusive gift calendar design", height: 447, column: 3, image: img3, link: 'https://www.behance.net/gallery/220928431/firmennyj-kalendar-masterskoj-pechati-oldskul' },
+        { id: 6, title: "“VNE ZALA” sport’s cafe logo design and visual identity concept", height: 641, column: 3, image: img6, link: 'https://www.behance.net/gallery/181179249/firmennyj-stil-kafe-vne-zala' },
 
     ],
 ]
@@ -48,7 +48,7 @@ const DesignProjects = () => {
                     return (
                         <ul className={styles.gridRow} key={index}>
                             {item.map(card => {
-                                return <ProjectCard key={card.title} title={card.title} height={card.height} img={card.image} />
+                                return <ProjectCard key={card.title} title={card.title} height={card.height} img={card.image} link={card.link} />
                             })}
                         </ul>
                     )

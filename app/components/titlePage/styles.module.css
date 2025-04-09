@@ -137,9 +137,9 @@
     font-family: "Literata", serif;
     font-weight: 400;
     font-size: 64px;
-    padding-left: 100%;
+    padding-left: 0;
 
-    animation: slide 120s linear infinite;
+    animation: slide 300s linear infinite;
 
     display: inline-block;
     white-space: nowrap;

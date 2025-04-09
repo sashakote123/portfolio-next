@@ -3,47 +3,51 @@
 import styles from './styles.module.css'
 import img from './../sources/mark.svg'
 import Image from 'next/image';
-import MainBtn from './../components/mainBtn/MainBtn'
-import { useState } from 'react';
+import MainBtn from '../components/mainBtn/MainBtn'
+import React, { useEffect, useState } from 'react';
 
 const Contacts = () => {
 
-    const [isSending, setIsSending] = useState(false);
-    const [sendStatus, setSendStatus] = useState('');
+    const [name, setName] = useState('')
+    const [mail, setMail] = useState('')
+    const [text, setText] = useState('')
 
+    const [sended, setSended] = useState(false)
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSending(true);
+    async function handleSubmit() {
+        //event.preventDefault();
 
-        const formData = new FormData(e.target);
-        const data = {
-            name: formData.get('name'),
-            details: formData.get('details'),
-            message: formData.get('message')
+        const formData = {
+            sendersName: name,
+            sendersMail: mail,
+            sendersText: text,
         };
 
         try {
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('/api/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(formData),
             });
-            console.log(response);
-            if (response.ok) {
-                setSendStatus('Message sent successfully!');
-            } else {
-                throw new Error('Failed to send message');
+
+            if (!response.ok) {
+                throw new Error('Ошибка при отправке');
             }
+
+            const result = await response.json();
+            console.log('Email отправлен:', result);
+            setSended(true)
         } catch (error) {
-            setSendStatus('Error sending message. Please try again.');
-            console.error('Error:', error);
-        } finally {
-            setIsSending(false);
+            console.error('Ошибка:', error);
         }
-    };
+    }
+
+    useEffect(() => {
+        setTimeout(() => setSended(false), 2000)
+    }, [sended])
+
 
     return (
         <section className={styles.contactsPage}>
@@ -53,16 +57,20 @@ const Contacts = () => {
                     <div className={styles.blueLine}></div>
                     <div className={styles.letterBack}>
                         <Image className={styles.mark} src={img} alt='mark' />
-                        <form className={styles.form} onSubmit={handleSubmit}>
+                        <form className={styles.form}>
                             <input
                                 name="name"
-                                type="text"
+                                type="name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                                 placeholder='Sender’s Name'
                                 required
                             />
                             <input
-                                name="details"
-                                type="text"
+                                name="email"
+                                type="email"
+                                value={mail}
+                                onChange={(e) => setMail(e.target.value)}
                                 placeholder='Sender’s Details (Email)'
                                 required
                             />
@@ -75,23 +83,23 @@ const Contacts = () => {
                             className={styles.placeholder}
                             placeholder='Start writing...'
                             required
-                            onChange={(e) => {
-                                document.getElementById('messageInput').value = e.target.value;
-                            }}
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}
                         ></textarea>
                         <button
-                            
-                            type="submit"
+                            onClick={handleSubmit}
+                            // type="submit"
+
                             form="emailForm"
                             className={styles.sendButton}
-                            disabled={isSending}
                         >
-                            {isSending ? 'Sending...' : 'Send →'}
+                            Send →
                         </button>
-                        {sendStatus && <p className={styles.status}>{sendStatus}</p>}
+
                     </div>
                 </div>
             </div>
+            {sended ? <div className={styles.sended}>Message sended</div> : null}
         </section>
     );
 }

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './styles.module.css'
 import img from './../../sources/headerImage.png'
+import React from 'react';
 
 
 const TitlePage = () => {
@@ -17,9 +18,12 @@ const TitlePage = () => {
             </div>
             <div className={styles.sliderContainer}>
                 <div className={styles.slider}>
-                    BRAND DESIGN VISUAL IDENTITY LOGO DESIGN ILLUSTRATION AND ART PRINT DESIGN PACKAGING DESIGN USER INTERFACE
-                    &nbsp;•&nbsp;
-                    BRAND DESIGN VISUAL IDENTITY LOGO DESIGN ILLUSTRATION AND ART PRINT DESIGN PACKAGING DESIGN USER INTERFACE
+                    {[...Array(5)].map((_, i) => (
+                        <React.Fragment key={i}>
+                            BRAND DESIGN VISUAL IDENTITY LOGO DESIGN ILLUSTRATION AND ART PRINT DESIGN PACKAGING DESIGN USER INTERFACE
+                            <span className={styles.separator}>•</span>
+                        </React.Fragment>
+                    ))}
                 </div>
             </div>
         </section>

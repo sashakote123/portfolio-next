@@ -86,8 +86,15 @@
 .table {
     position: relative;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse !important;
+    border-spacing: 0;
     border: none;
+}
+
+.leftCell,
+.rightCell,
+.row {
+    border: none !important;
 }
 
 .row {
@@ -95,6 +102,7 @@
 }
 
 .leftCell {
+    font-family: "Literata", serif;
     text-align: right;
     font-weight: 400;
     font-size: 36px;
@@ -134,7 +142,7 @@
 .table::before {
     content: "";
     position: absolute;
-    left: calc(50% + 11.5px);
+    left: calc(50% + 12px);
     top: 10px;
     width: 5px;
     /* height: 77.5%; */
@@ -153,10 +161,8 @@
     }
 
     .aboutPage {
-
         padding-top: 30px;
         padding-bottom: 10px;
- 
     }
 }
 
@@ -170,6 +176,7 @@
 }
 
 .lineTitle {
+    font-family: "Literata", serif;
     font-weight: 400;
     font-size: 28px;
     line-height: 120%;

@@ -80,7 +80,7 @@ const Contacts = () => {
                             }}
                         ></textarea>
                         <button
-                            onClick={handleSubmit}
+                            
                             type="submit"
                             form="emailForm"
                             className={styles.sendButton}

@@ -38,47 +38,52 @@
 }
 
 @media screen and (max-width: 950px) {
-
-
     .image {
         display: none;
     }
 
     .textInfo {
+        width: 100%;
         position: relative;
         left: 0 !important;
         text-align: right;
     }
 
     .sectionContainer {
-        
-       
         margin-right: 20px;
         top: calc(100% - 810px);
-
-
     }
-
-
 }
 
 @media screen and (max-width: 550px) {
     .name {
         margin-bottom: 200px !important;
-  
+
         font-size: 50px !important;
- 
     }
 }
 
 @media screen and (max-width: 500px) {
+    .name {
+        font-size: 40px !important;
+        margin-bottom: 150px !important;
+    }
     .textInfo {
-        
+        margin-top: 100px;
         padding-right: 0px !important;
         padding-left: 10px;
- 
+    }
+
+    .portfolio {
     }
 }
+
+@media screen and (max-width: 400px) {
+    .textInfo {
+        margin-top: 150px;
+    }
+}
+
 .textInfo {
     position: absolute;
     padding-right: 20px;
@@ -126,7 +131,7 @@
 
 .separator {
     margin: 0 1em; /* Отступы для разделителя */
-  }
+}
 
 .slider {
     font-family: "Literata", serif;
@@ -139,15 +144,6 @@
     display: inline-block;
     white-space: nowrap;
     color: #fff;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(-5%);
-    }
-    100% {
-        transform: translateX(calc(-100% - 1em));
-    }
 }
 
 @keyframes slide {

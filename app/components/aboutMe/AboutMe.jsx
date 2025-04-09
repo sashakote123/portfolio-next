@@ -17,7 +17,7 @@ const AboutMe = () => {
                     <br /><br />
                     I enjoy making meaningful design projects. Helping people get what they want through well made design is exciting to me, as well as learning new skills to achieve that goal.
                 </div>
-                <MainBtn link={'#!'} text={'My journey →'} />
+                <MainBtn link={'/about'} text={'My journey →'} />
             </div>
         </section>
     );

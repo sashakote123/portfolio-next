@@ -36,7 +36,7 @@ const Header = () => {
                     </li>
                     <li className={styles.listItem}>
                         {path === '/' ? <ScrollLink to='projects' smooth={true} href={'/contacts'}>Design projects</ScrollLink> :
-                            <a href={'https://www.behance.net/gallery/223085521/gajdbuk-sytaja-sova-neapolitanskaja-picca'}>Design projects</a>
+                            <a href={'https://www.behance.net/yanasig'}>Design projects</a>
                         }
 
 

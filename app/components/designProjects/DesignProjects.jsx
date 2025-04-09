@@ -54,7 +54,12 @@ const DesignProjects = () => {
                     )
                 })}
             </div>
-            <Link className={styles.btn} href={'/contacts'}>Contacts →</Link>
+            <div className={styles.btns}>
+                <Link className={styles.btn1} href={'/contacts'}>CV →</Link>
+                <Link className={styles.btn2} href={'https://www.behance.net/yanasig'}>Behance →</Link>
+                <Link className={styles.btn1} href={'/contacts'}>Contacts →</Link>
+            </div>
+
         </section>
     );
 }

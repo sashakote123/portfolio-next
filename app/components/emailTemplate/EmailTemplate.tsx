@@ -1,9 +1,5 @@
 import * as React from 'react';
 
-interface EmailTemplateProps {
-    firstName: string;
-}
-
 const EmailTemplate = ({
     sendersName, sendersMail, sendersText
 }: { sendersName: any, sendersMail: any, sendersText: any }) => (

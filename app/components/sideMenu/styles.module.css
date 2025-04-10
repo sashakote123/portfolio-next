@@ -8,7 +8,20 @@
     height: 100%;
 
     background-color: #000000cf;
+
+    animation: fadein 0.2s ease-in;
+
 }
+
+@keyframes fadein {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 
 .nav {
     margin-top: 25px;

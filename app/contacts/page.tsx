@@ -3,8 +3,9 @@
 import styles from './styles.module.css'
 import img from './../sources/mark.svg'
 import Image from 'next/image';
-import MainBtn from '../components/mainBtn/MainBtn'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+
+
 
 const Contacts = () => {
 
@@ -12,11 +13,40 @@ const Contacts = () => {
     const [mail, setMail] = useState('')
     const [text, setText] = useState('')
 
+    const [error, setError] = useState(false)
+
     const [sended, setSended] = useState(false)
+    const [validate, setValidate] = useState({ status: true, reason: 0 })
+
+
+    const validateForm = (): boolean => {
+        if (!name || !mail || !text) {
+            setValidate({ status: false, reason: 1 })
+            return false
+        }
+        else if (!mail.includes('@')) {
+            setValidate({ status: false, reason: 2 })
+            return false
+        }
+        return true
+    }
+
+
+    useEffect(() => {
+        if (validate.reason !== 0) {
+            setValidate({ status: true, reason: 0 })
+        }
+
+    }, [name, mail, text])
+
 
     async function handleSubmit() {
-        //event.preventDefault();
 
+        const isValid = validateForm()
+        if (!isValid) {
+            console.log('not validated!:', validate.reason);
+            return
+        }
         const formData = {
             sendersName: name,
             sendersMail: mail,
@@ -36,11 +66,11 @@ const Contacts = () => {
                 throw new Error('Ошибка при отправке');
             }
 
-            const result = await response.json();
-            console.log('Email отправлен:', result);
+
             setSended(true)
-        } catch (error) {
-            console.error('Ошибка:', error);
+        } catch (error: any) {
+            console.log(error);
+            setError(true)
         }
     }
 
@@ -48,6 +78,9 @@ const Contacts = () => {
         setTimeout(() => setSended(false), 2000)
     }, [sended])
 
+    useEffect(() => {
+        setTimeout(() => setError(false), 2000)
+    }, [error])
 
     return (
         <section className={styles.contactsPage}>
@@ -59,6 +92,7 @@ const Contacts = () => {
                         <Image className={styles.mark} src={img} alt='mark' />
                         <form className={styles.form}>
                             <input
+                                style={{ borderBottom: validate.reason === 1 ? '#dc26265b 2px solid' : 'unset' }}
                                 name="name"
                                 type="name"
                                 value={name}
@@ -66,7 +100,9 @@ const Contacts = () => {
                                 placeholder='Sender’s Name'
                                 required
                             />
+                            <div className={styles.error}>{validate.reason === 1 ? 'Please fill in all fields' : null}</div>
                             <input
+                                style={{ borderBottom: validate.reason !== 0 ? '#dc26265b 2px solid' : 'unset' }}
                                 name="email"
                                 type="email"
                                 value={mail}
@@ -74,11 +110,14 @@ const Contacts = () => {
                                 placeholder='Sender’s Details (Email)'
                                 required
                             />
+                            <div className={styles.error}>{validate.reason === 1 ? 'Please fill in all fields' : null}</div>
+                            <div className={styles.error}>{validate.reason === 2 ? 'Not valid email' : null}</div>
                             <input type="hidden" name="message" id="messageInput" />
                         </form>
                     </div>
                     <div className={styles.letterFront}>
                         <textarea
+                            style={{ border: validate.reason === 1 ? '#dc26265b 2px solid' : 'unset' }}
                             name="message"
                             className={styles.placeholder}
                             placeholder='Start writing...'
@@ -86,9 +125,9 @@ const Contacts = () => {
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                         ></textarea>
+                        <div className={styles.error}>{validate.reason === 1 ? 'Please fill in all fields' : null}</div>
                         <button
                             onClick={handleSubmit}
-                            // type="submit"
 
                             form="emailForm"
                             className={styles.sendButton}
@@ -100,6 +139,7 @@ const Contacts = () => {
                 </div>
             </div>
             {sended ? <div className={styles.sended}>Message sended</div> : null}
+            {error ? <div className={styles.notSended}>Message not sended!</div> : null}
         </section>
     );
 }

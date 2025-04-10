@@ -7,7 +7,7 @@ import img2 from './../../sources/burger.svg'
 import Image from 'next/image';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import SideMenu from './../sideMenu/SideMenu'
 

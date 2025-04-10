@@ -9,17 +9,6 @@ import img4 from './../../sources/projects/4.jpg'
 import img5 from './../../sources/projects/5.jpg'
 import img6 from './../../sources/projects/6.jpg'
 
-const list = [
-    { id: 1, title: "1. Short project description", height: 550, column: 1 },
-    { id: 2, title: "2. Short project description", height: 384, column: 2 },
-    { id: 3, title: "3. Short project description", height: 652, column: 3 },
-    { id: 4, title: "4. Short project description", height: 550, column: 1 },
-    { id: 5, title: "5. Short project description", height: 552, column: 2 },
-    { id: 6, title: "6. Short project description", height: 552, column: 3 },
-    { id: 7, title: "7. Short project description", height: 550, column: 1 },
-    { id: 8, title: "8. Short project description", height: 652, column: 2 },
-    { id: 9, title: "9. Short project description", height: 384, column: 3 },
-]
 
 const resList = [
     [

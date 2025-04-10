@@ -1,5 +1,5 @@
 .mainBtn {
-  
+    position: relative;
 
     display: block;
     padding: 15px 0;
@@ -11,6 +11,23 @@
     font-size: 24px;
     text-align: center;
     color: #fff;
-
+    z-index: 1;
+    overflow: hidden;
     background: #006fe7;
+}
+.mainBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    background: linear-gradient(45deg, #006fe7, #004c9d);
+    transition: left 0.5s ease;
+}
+
+.mainBtn:hover::before {
+    left: 0;
 }

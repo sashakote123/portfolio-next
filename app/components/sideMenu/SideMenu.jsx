@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './styles.module.css'
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
